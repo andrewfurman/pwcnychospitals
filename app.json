@@ -1,0 +1,12 @@
+{
+  "name": "PwC's NYC Public Hospitals Patient Satisfaction App",
+  "description": "Creates a visualization of patient satisfaction at NYC Public Hosplitals",
+  "keywords": [
+    "PwC",
+    "Health",
+    "Advisory"
+  ],
+  "repository": "https://github.com/furman/pwcnychospitals",
+  "addons": [
+  ]
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+       text: "Customer Satisfaction at NYC Public Hospitals"
+      },
+      axisX: {
+        title:"% found staff helpful",
+       maximum: 60,
+       minimum: 40
+      },
+      axisY: {
+        title:"% would recomend",
+        minimum: 40
+      },
+
+      legend:{
+        verticalAlign: "bottom",
+        horizontalAlign: "left"
+
+      },
+      data: [
+      {
+        type: "bubble",
+        legendText: "Size of Bubble Represents # of Beds",
+        showInLegend: true,
+        legendMarkerType: "circle",
+ toolTipContent: "<strong>{name}</strong> <br/> Patients Would Recommed: {y}%<br/> % of patients satisfied with staff: {x}%<br/> # of Beds: {z} mn",
+     dataPoints: [
+     { x: 49, y: 63, z: 912, name: "BELLEVUE HOSPITAL CENTER" },
+     { x: 57, y: 54, z: 371, name: "CONEY ISLAND HOSPITAL"},
+     { x: 44, y: 58, z: 551, name: "ELMHURST HOSPITAL CENTER"},
+     { x: 48, y: 50, z: 272, name: "HARLEM HOSPITAL CENTER"},
+     { x: 47, y: 58, z: 477, name: "JACOBI MEDICAL CENTER"},
+     { x: 45, y: 64, z: 627, name: "KINGS COUNTY HOSPITAL CENTER" },
+
+     { x: 52, y: 57, z: 347, name: "LINCOLN MEDICAL & MENTAL HEALTH CENTER" },
+     { x: 49, y: 56, z: 324, name:"METROPOLITAN HOSPITAL CENTER" },
+     { x: 49, y: 61, z: 207, name: "NORTH CENTRAL BRONX HOSPITAL"},
+     { x: 56, y: 71, z: 271, name:"QUEENS HOSPITAL CENTER" },
+     { x: 48, y: 59, z: 332, name: "WOODHULL MEDICAL AND MENTAL HEALTH CENTER"}
+     ]
+   }
+   ]
+ });
+
+chart.render();
+}
+</script>
+<script type="text/javascript" src="/canvas/canvasjs.min.js"></script></head>
+<body>
+    <div style="background-color:lightgrey;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;">
+    <h1><a href="http://www.pwc.com"><img src="http://static1.squarespace.com/static/5486ebede4b06fdbf3d8475e/54a1443ae4b093269b65e0cd/54a14664e4b0f8d712cdfbb0/1419855839794/PwC_fl_logo_color_white.jpg" alt="PwC" style="width:90px;height:50px;">
+    </a>&nbsp &nbsp &nbsp PwC's Heroku Partner Showcase Application</h1>
+</div>
+    <center>
+  <div id="chartContainer" style="height: 700px; width: 700px;">
+  </div>
+  <h2><a href="https://data.cityofnewyork.us/Health/New-York-City-Health-and-Hospitals-Corporation-HHC/hi3x-y76v">Source Data</a></h2>
+  </center>
+</body>
+</html>
